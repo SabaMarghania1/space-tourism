@@ -56,3 +56,66 @@
     }
     
 }
+
+
+.menu li a{
+    width:117%;
+    color:var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap:16px;
+transition: all 1.3s ease;
+
+@starting-style{
+    transform:translateX(200px)
+}
+
+}
+
+.menu li a span{
+    font-weight: 700;
+    letter-spacing: 2.7px;
+}
+
+@media screen and (min-width:768px){
+.navigation{
+    width:100%;
+}
+
+.menuToggle{
+    display:none;
+}
+
+.menu,.menu.open{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    position:relative;
+    justify-content: flex-end;
+    align-items: center;
+    height:96px;
+    background-color: grey;
+    gap:30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    padding-right:40px;
+
+
+
+
+
+}
+
+.menu.open{
+    padding:0;
+    padding-right:40px;;
+    
+}
+
+.menu li a{
+    gap:12px;   
+    width:100%;
+}
+
+}

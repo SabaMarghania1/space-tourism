@@ -56,4 +56,29 @@ p{
   color:var(--light-blue)
 }
 
+.navLink.active{
+  border-right:3px solid white;
+}
 
+
+@media screen and (min-width:768px){
+  .navLink.active{
+    border:0;
+    padding:37.5px 0;
+    position:relative;
+  }
+
+  .navLink.active::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background-color: white;
+  }
+
+
+  
+
+  }
+  
