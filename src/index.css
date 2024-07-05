@@ -1,0 +1,21 @@
+:root{
+  --very-dark-navy:11, 13, 23;
+  --light-blue:208, 214, 249;
+  --white:255,255,255;
+
+
+  --heading-xl:144px;
+  --heading-l:100px;
+  --heading-m:56px;
+  --heading-s:32px;
+  --heading-xs:28px;
+
+  --subheading-l:28px;
+  --subheading-s:14px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
