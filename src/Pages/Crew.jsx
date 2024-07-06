@@ -1,14 +1,26 @@
 import styles from './Crew.module.css'
 import Header from "../Components/Header/Header"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 export default function Crew({crew}) {
 const [tab,setTab] = useState("Commander")
+const [searchParams,setSearchParams] = useSearchParams()
 
 const activeCrew = crew.find(member=>member.role === tab)
 
+useEffect(() => {
+  const role = searchParams.get('role');
+  if (role) {
+    setTab(role);
+  }
+}, [searchParams]);
+
+
+
 const handleClick = (role)=>{
   setTab(role)
+  setSearchParams({role:role})
 }
 
 console.log(activeCrew)

@@ -186,9 +186,11 @@ color:#fff;
     .content__container{
        flex-direction: row;
        padding:0;
+       gap:100px;
     }
 
     .first{
+        padding-top:180px;
         align-items: flex-start;
         justify-content: center;
         gap:237px;
