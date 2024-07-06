@@ -25,6 +25,8 @@
         padding-left:64px;
         justify-content: space-between;
         gap:64px;
+        height:96px;
+        align-items: center;
     }
 
 

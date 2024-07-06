@@ -32,8 +32,10 @@
 body{
   font-family:"Barlow", sans-serif;
   color:var(--white);
-  overflow: hidden;
+  overflow-x:hidden;
+  min-height:100vh;
 }
+
 
 ul{
   list-style:none;

@@ -9,3 +9,171 @@
        opacity:0;
     }
 }
+
+.main{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    gap:70px;
+}
+
+
+
+.container__header{
+    display:flex;
+    flex-direction: column;
+    gap:48px;
+
+    text-align: center;
+    transition:0.5s all ease;
+
+    @starting-style{
+        transform:translateX(-100%)
+    }
+}
+
+
+
+.subheading{
+    display:flex;
+    gap:24px;
+    justify-content: center;   
+    align-items: center;
+    font-size: 16px;
+
+
+    transition:0.7s all ease;
+
+    @starting-style{
+        transform:translateX(200%)
+    }
+
+}
+
+.number{
+    font-size: 19px;
+    color:#fff;
+    opacity:0.25;
+    letter-spacing: 2.4px;;
+}
+
+.imageContainer{
+    width: 228px;
+    height: 228px;
+    object-fit: cover;
+
+
+    transition:0.7s all ease;
+
+    @starting-style{
+        transform:translateX(-100%)
+    }
+}
+
+.image{
+    width:100%;
+
+}
+.tabContainer{
+    display:flex;
+    justify-content: center;
+    gap:32px;
+    margin:0 40.5px 70px;
+    
+}
+
+
+
+.tabsButton{
+    background-color: transparent;
+    border:none;
+    color: var(--color-light-blue, #D0D6F9);
+    font-family: "Barlow Condensed";
+    font-size: var(--font-size-mobile-navigation, 14px);
+    letter-spacing: 1.1px;
+    position:relative;
+
+}
+
+.tabsButton.active::before{
+    content:"";
+    position:absolute;
+    cursor:pointer;
+    width:100%;
+    height:3px;
+    background-color:white;
+    bottom:-25px;
+    left:0;
+}
+
+
+.container__content{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;   
+
+}
+
+.top{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin:0 24px;
+    text-align: center;
+    color: var(--color-light-blue, #D0D6F9);
+    line-height: 180%; 
+    gap:16px;
+    padding-bottom:24px;
+    border-bottom:1px solid grey
+}
+
+.title{
+    text-align: center;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+
+.bottom{
+    padding-top:24px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:24px
+}
+
+.details{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px; 
+    font-size: 28px;
+    font-family: Bellefair;
+}
+
+.details span{
+    color: var(--color-light-blue, #D0D6F9);
+font-family: "Barlow Condensed";
+font-size: var(--font-size-desktop-sub-heading-s, 14px);
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+
+@media screen and (min-width:768px){
+
+   .destinationsPage{
+    background-image: url("/destination/background-destination-tablet.jpg");
+   } 
+    
+}
+
+
+@media screen and (min-width:1440px){
+
+    .destinationsPage{
+        background-image: url("/destination/background-destination-desktop.jpg");
+    }
+}
