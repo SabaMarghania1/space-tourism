@@ -1,10 +1,18 @@
+import styles from './Destinations.module.css';
+import Header from "../Components/Header/Header";
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
-import styles from './Destinations.module.css'
-
-import Header from "../Components/Header/Header"
-import { useState } from 'react'
 export default function Destinations({ destinations }) {
   const [selectedTab, setSelectedTab] = useState("moon");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam) {
+      setSelectedTab(tabParam.toLowerCase());
+    }
+  }, [searchParams]);
 
   const destination = destinations.find(destination => destination.name.toLowerCase() === selectedTab.toLowerCase());
 
@@ -12,6 +20,8 @@ export default function Destinations({ destinations }) {
 
   const handleTabClick = (dest) => {
     setSelectedTab(dest.toLowerCase());
+   
+    setSearchParams({ tab: dest.toLowerCase() });
   };
 
   return (
@@ -25,38 +35,37 @@ export default function Destinations({ destinations }) {
           </div>
         </section>
         <section className={styles.container__content}>
-
           <div className={styles.tabContainer}>
             {destinationsName.map(dest => {
-              const isActive = selectedTab === dest.toLowerCase()
-               return  <button
-                key={dest}
-                className={`${styles.tabsButton} ${isActive ? styles.active: ""}`}
-                onClick={() => handleTabClick(dest)}
-              >
-                {dest}
-              </button>
-            }
-     
-            )}
+              const isActive = selectedTab === dest.toLowerCase();
+              return (
+                <button
+                  key={dest}
+                  className={`${styles.tabsButton} ${isActive ? styles.active : ""}`}
+                  onClick={() => handleTabClick(dest)}
+                >
+                  {dest}
+                </button>
+              );
+            })}
           </div>
 
           <div className={styles.textInformation}>
-              <div className={styles.top}>
-                <h1 className={styles.title}>{destination.name}</h1>
-                <p className={styles.paragraph}>{destination.description}</p>
-              </div>  
-              <div className={styles.bottom}>
-                <p className={styles.details}>
-                  <span>AVG. DISTANCE</span>
-                  {destination.distance.toUpperCase()}
-                </p>
-                <p className={styles.details}>
-                  <span>EST. TRAVEL TIME</span>
-                  {destination.travel.toUpperCase()}
-                </p>
-              </div>
-          </div>    
+            <div className={styles.top}>
+              <h1 className={styles.title}>{destination.name}</h1>
+              <p className={styles.paragraph}>{destination.description}</p>
+            </div>
+            <div className={styles.bottom}>
+              <p className={styles.details}>
+                <span>AVG. DISTANCE</span>
+                {destination.distance.toUpperCase()}
+              </p>
+              <p className={styles.details}>
+                <span>EST. TRAVEL TIME</span>
+                {destination.travel.toUpperCase()}
+              </p>
+            </div>
+          </div>
 
         </section>
       </main>
