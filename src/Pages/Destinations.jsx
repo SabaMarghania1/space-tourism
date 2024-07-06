@@ -52,7 +52,7 @@ export default function Destinations({ destinations }) {
 
           <div className={styles.textInformation}>
             <div className={styles.top}>
-              <h1 className={styles.title}>{destination.name}</h1>
+              <h1 className={styles.title}>{destination.name.toUpperCase()}</h1>
               <p className={styles.paragraph}>{destination.description}</p>
             </div>
             <div className={styles.bottom}>
