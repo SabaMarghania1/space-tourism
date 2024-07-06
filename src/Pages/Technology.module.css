@@ -114,3 +114,120 @@ gap:40px;
     font-size: var(--font-size-mobile-body, 15px);
     line-height: 180%; /* 27px */
 }
+
+@media screen and (min-width:768px){
+    .technologyPage{
+        background-image: url(/technology/background-technology-tablet.jpg);
+        
+    }
+    .main{
+        padding-top: 40px;
+    }
+
+    .subtitle{
+        justify-content: flex-start;
+        padding-left:40px;
+        font-size: 20px;
+    }
+
+    .imageContainer{
+        min-height:330px;
+        object-fit: contain;
+    }
+    .imageContainer img{
+     height:100%;
+     object-fit: cover;
+    }
+
+    .text__content{
+        max-width:512px;
+        width: 100%;
+
+    }
+
+    .number{
+        width: 56px;
+        height: 56px;
+    }
+
+    .subheading{
+        font-size: 24px;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .paragraph{
+        font-size: 16px;
+        padding:0;
+        padding-bottom: 20px;;
+    }
+}
+
+@media  screen and (min-width:1440px) {
+    .technologyPage{
+        background-image: url(/technology/background-technology-desktop.jpg);
+        
+    }
+    
+
+    .content__container{
+        flex-direction: row-reverse;
+        padding-left:165px ;
+        gap:20px;
+    }
+
+    .content{
+        flex-direction: row;
+        flex:1
+        
+    }
+    .header{
+        text-align: left;
+    }
+
+    .numbers{
+        flex-direction: column;
+
+    }
+
+    .imageContainer{
+        flex:1;
+        height: 606px;
+        
+    }
+
+    .subheading{
+        font-size: 32px;
+    }
+
+    .paragraph{
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .title{
+            font-size: 56px;
+            letter-spacing: 0;
+            width:100%;
+        }
+    .number{
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+    }
+
+    .numbers{
+        gap:32px;
+    }
+
+    .content{
+        gap:64px;   
+    }
+
+    .subtitle{
+        font-size: 28px;
+        padding-left: 165px;
+    }
+}
