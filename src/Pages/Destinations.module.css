@@ -1,0 +1,11 @@
+.destinationsPage{
+    width: 100%;
+    min-height: 100vh;
+    background: url(/destination/background-destination-mobile.jpg) center/cover no-repeat;
+    color:white;
+    transition: all 0.4s ease;
+
+    @starting-style{
+       opacity:0;
+    }
+}

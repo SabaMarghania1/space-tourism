@@ -3,14 +3,116 @@
   height:100vh;
   background: url(/home/background-home-mobile.jpg) no-repeat center ;
   background-size: cover;
+  color:white;
+}
+.main{
+  padding: 0 24px;
+  padding-bottom:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:119px
+}
+
+.textContent{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap:24px;
+}
+
+.subheading{
+  color:rgba(var(--light-blue));
+  font-size: var(--font-size-mobile-heading-xs, 16px);
+  font-family: "Barlow Condensed";
+  letter-spacing: 2.4px;
+  font-weight: 400;
 }
 
 
+.title{
+  font-family: Bellefair;
+  font-size: var(--font-size-mobile-heading-xl, 80px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
+.paragraph{
+  font-size: var(--font-size-mobile-body, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; 
+}
+
+.button{
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: rgba(var(--very-dark-navy));
+  text-transform: uppercase;
+  font-family: Bellefair;
+  cursor:pointer;
+}
 
 
 @media screen and  (min-width:768px) {
   .homePage {
     background-image: url(/home/background-home-tablet.jpg);
   }
+
+  .main{
+    margin-top:104px;
+    gap:66px
+  }
+
+  .textContent{
+    padding:0 100px;
+  }
+
+  .subheading{
+    font-size: 28px;
+  }
+
+  .title{
+    font-size: 144px;
+  }
+
+  .paragraph{
+    font-size: 16px;
+    line-height: 180%;
+  }
+
+  .button{
+    width: 272px;
+    height: 272px;
+    font-size: 32px;
+  }
+}
+
+@media screen and  (min-width:1440px){
+.homePage{
+  background-image: url(/public/home/background-home-desktop.jpg);
+}
+
+.main{
+  margin-top:300px;
+  flex-direction: row;
+  padding:0  165px;
+  justify-content: space-between;
+
+}
+
+.textContent{
+  padding:0;
+  text-align: start;
+  width:540px;
+}
+
+.paragraph{
+  font-size: 18px;
+}
 }

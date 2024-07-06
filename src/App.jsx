@@ -8,10 +8,10 @@ import Destinations from "./Pages/Destinations"
 import Technologys from "./Pages/Technologys"
 import data from "./data.json"
 
+
 export default function App() {
   return (
     <BrowserRouter>
-   
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/crew" element={<Crew/>}/>

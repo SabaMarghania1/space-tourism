@@ -100,13 +100,7 @@ transition: all 1.3s ease;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
     padding-right:40px;
-
-
-
-
-
 }
-
 .menu.open{
     padding:0;
     padding-right:40px;;
@@ -116,6 +110,36 @@ transition: all 1.3s ease;
 .menu li a{
     gap:12px;   
     width:100%;
+}
+
+}
+
+@media  screen and (min-width:1440px) {
+.navigation{
+    min-width:644px;
+    width:100%;
+    justify-content: flex-end;
+    padding-left:80px;
+    
+}
+.menu,.menu.open{
+    max-width:724px;
+    padding-left:159px;
+    position:relative
+}
+
+.menu::before,.menu.open::before{
+    content:"";
+    position:absolute;
+    width:560px;
+    height:1px;
+    background-color: rgba(var(--white),0.25);
+    left:-540px;
+}
+
+    
+.menu{
+  padding-right:64px;
 }
 
 }

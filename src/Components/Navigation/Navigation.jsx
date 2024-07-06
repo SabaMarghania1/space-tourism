@@ -23,9 +23,9 @@ export default function Navigation() {
       </div>
 
       <ul className={`${styles.menu} ${isOpen ? styles.open:""}`}>
-        <li><NavLink className="navLink" exact to="/" onClick={toggleMenu} ><span>00</span> HOME</NavLink></li>
-        <li><NavLink className="navLink" to="/crew" onClick={toggleMenu} ><span>01</span> CREW</NavLink></li>
-        <li><NavLink className="navLink" to="/destinations" onClick={toggleMenu} ><span>02</span> DESTINATION</NavLink></li>
+        <li><NavLink className="navLink"  to="/" onClick={toggleMenu} ><span>00</span> HOME</NavLink></li>
+        <li><NavLink className="navLink" to="/destinations" onClick={toggleMenu} ><span>01</span> DESTINATION</NavLink></li>
+        <li><NavLink className="navLink" to="/crew" onClick={toggleMenu} ><span>02</span>CREW</NavLink></li>
         <li><NavLink className="navLink" to="/technologys" onClick={toggleMenu} ><span>03</span> TECHNOLOGY</NavLink>
         </li>
       </ul>

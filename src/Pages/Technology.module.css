@@ -1,0 +1,11 @@
+.technologyPage{
+    width: 100%;
+    min-height: 100vh;
+    background: url(/technology/background-technology-mobile.jpg) right/cover no-repeat;
+    color:white;
+    transition: all 0.4s ease;
+
+    @starting-style{
+       opacity:0.5;
+    }
+}
